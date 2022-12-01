@@ -1,8 +1,16 @@
-import ReactDom from 'react-dom';
+import ReactDom from 'react-dom'
 
-function Greeting(){
-  return <h4>this is Brett, and this is my first component!</h4>;
+function Greeting() {
+  return (
+    <div>
+      <Person />
+      <Message />
+    </div>
+  )
 }
 
-ReactDom.render(<Greeting />, document.getElementById('root'));
-
+const Person = () => <h2>John doe</h2>
+const Message = () => {
+  return <p>this is a message</p>
+}
+ReactDom.render(<Greeting />, document.getElementById('root'))
