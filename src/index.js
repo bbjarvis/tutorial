@@ -23,21 +23,30 @@ function BookList() {
         img={firstBook.img}
         title={firstBook.title}
         author={firstBook.author}
-      />
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, est
+          voluptates. Delectus sapiente vero sed laboriosam obcaecati,
+          accusantium est! Similique earum at dolor saepe, alias quibusdam
+          itaque iste ratione molestias.
+        </p>
+      </Book>
       <Book
         img={secondBook.img}
         title={secondBook.title}
         author={secondBook.author}
-      />
+      ></Book>
     </section>
   )
 }
-const Book = ({ img, title, author }) => {
+// destructring props, note that "children" is a specail name that refers to children elements
+const Book = ({ img, title, author, children }) => {
   return (
     <article className='book'>
       <img src={img} alt='' />
       <h1>{title}</h1>
       <h4>{author}</h4>
+      {children}
     </article>
   )
 }
